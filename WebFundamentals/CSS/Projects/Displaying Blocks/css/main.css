@@ -1,0 +1,125 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	position: relative;
+	background-color: #d4d1b0;
+	color: black;
+	width: 525px;
+	height: 510px;
+	z-index: -4;
+}
+
+h1 {
+	position: relative;
+	text-align: center;
+	top: 40px;
+	font-size: 25px;
+}
+
+.header .headRow {
+	position: absolute;
+	left: 200px;
+	top: 5px;
+}
+
+ul.rowBlue1 {
+	position: absolute;
+	margin-left: 13px;
+	top: 80px;
+}
+
+ul.rowRed2 {
+	position: absolute;
+	margin-left: 112px;
+	top: 80px;
+}
+
+ul.rowBlue3 {
+	position: absolute;
+	margin-left: 211px;
+	top: 80px;
+}
+
+ul.rowRed4 {
+	position: absolute;
+	margin-left: 310px;
+	top: 80px;
+}
+
+ul.rowBlue5 {
+	position: absolute;
+	margin-left: 409px;
+	top: 80px;
+}
+
+.headRow .headImg1 {
+	position: absolute;
+	right: 40px;
+}
+
+.headRow .headImg2 {
+	position: absolute;
+	left: 160px;
+}
+
+ul li.row1 {
+	width: 90px;
+	background-color: #84b5eb;
+	border: 3px solid;
+	display: block;
+	margin: 3px;
+}
+
+ul li.row2 {
+	position: relative;
+	width: 90px;
+	background-color: #f16a72;
+	border: 3px solid;
+	display: block;
+	margin: 3px;
+}
+
+ul li.row3 {
+	position: relative;
+	width: 90px;
+	background-color: #84b5eb;
+	border: 3px solid;
+	display: block;
+	margin: 3px;
+
+}
+
+ul li.row4 {
+	position: relative;
+	width: 90px;
+	background-color: #f16a72;
+	border: 3px solid;
+	display: block;
+	margin: 3px;
+}
+
+ul li.row5 {
+	position: relative;
+	width: 90px;
+	background-color: #84b5eb;
+	border: 3px solid;
+	display: block;
+	margin: 3px;
+
+}
+
+.resizeImg {
+	width: 80px;
+	height: 80px;
+	margin: 5px;
+}
+
+#resizeHeadImg {
+	width: 100px;
+	height: 60px;
+	margin: 5px;
+}
+

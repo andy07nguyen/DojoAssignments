@@ -1,0 +1,156 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100%;
+}
+
+header {
+	display: inline-block;
+	width: 89%;
+	height: 100px;
+	/*background-color: gre;*/
+	margin-left: 70px; 
+}
+
+header h4 {
+	position: relative;
+	display: inline-block;
+	margin-left: 520px;
+	bottom: 30px;
+	font-size: 20px;
+}
+nav {
+/*	background-color: grey;
+*/	width: 100%;
+	height: 50px;
+}
+
+nav ul {
+	list-style: none;
+	text-align: center;
+	position: relative;
+	top: 17px;
+}
+
+nav ul li {
+	display: inline-block;
+	margin-left: -6px;
+	border-color: black;
+	border-style: solid;
+	border-width: 2px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 12px;
+	padding-bottom: 14px;
+	margin-top: -35px;
+}
+
+.wrapper {
+	background-color: #5c5470;
+}
+
+.wrapper .contentBox1 {
+	/*background-color: red;*/
+	width: 1118px;
+	height: 350px;
+	margin-left: 78px; 
+}
+
+.wrapper .contentBox1 img {
+	display: inline-block;
+	position: relative;
+	margin-left: 30px;
+	top: 20px;
+	border-color: silver;
+	border-style: solid;
+	border-width: 8px;
+}
+
+.wrapper .contentBox1 .textBox1 {
+	display: block;
+	width: 425px;
+	height: 316px;
+	background-color: #e3dde6;
+	margin-left: 660px;
+	position: relative;
+	bottom: 300px;
+}
+
+.wrapper .contentBox1 .textBox1 h3 {
+    background: linear-gradient(silver, grey, silver); 
+    width: 425px;
+    height: 30px;
+	text-indent: 15px;
+	position: relative;
+	padding-top: 15px;
+}
+
+.wrapper .contentBox1 .textBox1 h5 {
+	margin-left: 15px;
+	position: relative;
+	top: 15px
+}
+
+.wrapper .contentBox1 .textBox1 p {
+	width: 400px;
+	margin-left: 15px;
+	position: relative;
+	top: 40px
+}
+
+.wrapper .contentBox2 .boxes {
+	display: inline-block;
+	width: 251px;
+	height: 510px;
+	background-color: #e0e4eb;
+	margin-left: 10px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	position: relative;
+	left: 97px; 
+} 
+
+
+.wrapper .contentBox2 .boxes h3 {
+	background: linear-gradient(silver, grey, silver); 
+    width: 251px;
+    height: 30px;
+	text-indent: 15px;
+	position: relative;
+	padding-top: 15px;
+	font-size: 18px;
+}
+
+.wrapper .contentBox2 .boxes p {
+	text-align: left;
+	width: 230px;
+	position: relative;
+	top: 20px;
+	left: 15px;
+}
+
+.wrapper .contentBox2 .boxes button {
+	background-color: #5d729a;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 7px;
+	border-color: #1a0a0d;
+	border-width: 3px;
+	color: white;
+	margin-left: 130px;
+	position: relative;
+	top: 80px;
+}
+
+.resizeImg {
+	width: 251px;
+	height: 150px;
+}
+
+
+
+

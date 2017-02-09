@@ -1,0 +1,130 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* WRAPPER */
+.wrapper {
+	width: 970px;
+	height: 600px;
+	background-color: #1d345c;
+	z-index: -4;
+}
+
+/* HEADER */
+header .headerBox {
+	width: 98%;
+	height: 80px;
+	background-color: #cc323a;
+	border-radius: 15px;
+	display: block;
+	position: relative;
+	margin-left: 8px;
+	top: 12px;
+}	
+
+.headerBox h1 {
+	color: #c3d7eb;
+	font-size: 30px;
+	margin-left: 30px;
+	position: relative;
+	top: 20px;
+}
+
+/* NAVIGATION BAR*/
+nav .navBox {
+	background-color: #2e7d8b;
+	width: 230px;
+	height: 250px;
+	border-radius: 30px;
+	position: absolute;
+	top: 109px;
+	left: 8px;
+} 
+
+.navBox ul {
+	margin-left: 25px;
+	margin-top: 13px;
+}
+
+ul .homeLi {
+	list-style: none;
+}
+
+.navBox ul li a {
+	color: #63d0d0;
+	font-size: 12px;
+}
+
+/* CONTENT BOX */
+section .contentBox {
+	background-color: #0e1821;
+	border-radius: 30px;
+	width: 700px;
+	height: 413px;
+	display: inline-block;
+	position: absolute;
+	bottom: 113px;
+	left: 259px;
+}
+
+section .contentBox h3 {
+	color: #c3d7eb;
+	position: absolute;
+	top: 15px;
+	left: 10px;
+}
+
+section .contentBox p {
+	color: #c3d7eb;
+	font-size: 12px;
+	position: absolute;
+	top: 40px;
+	left: 10px;
+	width: 650px;
+}
+
+section .contentBox ul {
+	position: absolute;
+	top: 100px;
+	left: 30px;
+	font-size: 12px;
+	width: 650px;
+}
+
+section .contentBox ul li {
+	color: #c3d7eb;
+}
+
+section .contentBox ul li a {
+	color: #63d0d0;
+}
+
+.contentSpan {
+	color: #6f7cec;
+}
+
+
+/* FOOTER */
+footer .footerBox {
+	background-color: #5e6672;
+	width: 953px;
+	height: 50px;
+	display: block;
+	border-radius: 20px;
+	position: absolute;
+	bottom: 45px;
+	left: 8px;
+}
+
+footer .footerBox h5 {
+	color: #c3d7eb;
+	font-size: 10px;
+	position: absolute;
+	top: 17px;
+	left: 20px;
+}
+
+.footerSpan {
+	color: #63d0d0;
+}

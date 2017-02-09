@@ -1,0 +1,289 @@
+* {
+	margin: 0;
+	padding: 0
+}
+
+.wrapper {
+	width: 970px;
+	z-index: -1;
+	height: 400px;
+}
+
+header {
+	background-color: #265175;
+	height: 400px;
+}
+
+header .headerBox {
+	display: block;
+	width: 930px;
+	height: 95px;
+	/*background-color: grey;*/
+	margin-left: 18px;
+	z-index: -2;
+}
+
+header ul {
+	position: relative;
+	top: 4px;
+	list-style: none;
+	margin-left: 768px;
+}
+
+header ul li {
+	display: inline;
+	font-size: 12px;
+}
+
+header ul li.whiteTxt {
+	color: white;
+}
+
+header ul li a {
+	color: #b9a311;
+}
+
+header img {
+	position: relative;
+	bottom: 10px;
+}
+
+header .headerBox input {
+	text-indent: 45px;
+	color: grey;
+	height: 25px;
+	margin-left: 430px;
+	position: relative;
+	bottom: 48px;
+	right: 4px;
+	z-index: 1;
+}
+
+header button {
+	position: relative;
+	bottom: 48px;
+	right: 3px;
+	z-index: 1;
+	padding: 5px;
+	border-radius: 5px;
+	width: 35px;
+	background-color: #265175;
+	color: #c5d1da;	
+}
+
+.headerBox .searchBox {
+	background-color: #444444;
+	width: 225px;
+	height: 55px;
+	margin-left: 700px;
+	display: block;
+	position: relative;
+	bottom: 90px;
+	border-radius: 10px;
+}
+
+nav {
+	width: 830px;
+	height: 35px;
+	background-color: #497fab;
+	display: block;
+	position: relative;
+	bottom: 305px;
+	left: 70px;
+	border-radius: 5px;
+}
+
+nav ul {
+	list-style: none;
+}
+
+nav ul li {
+	display: inline-block;
+	position: relative;
+	left: 10px;
+	top: 5px;
+	margin-left: 40px;
+	font-size: 22px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #ecf2f6;
+}
+
+/*.contentBox {
+	display: block;
+	position: relative;
+}*/
+
+.guideBox {
+	width: 155px;
+	height: 157px;
+	/*background-color: grey;*/
+	position: relative;
+	display: block;
+	bottom: 270px; 
+	margin-left: 100px;
+}
+
+.guideBox ul {
+	list-style: none;
+	text-align: center;
+}
+
+.guideBox ul li {
+	margin-bottom: 5px;
+}
+
+.guideBox ul li a {
+	color: #ecf2f6;
+	font-size: 15px;
+}
+
+.infoBox {
+	display: block;
+	z-index: 1;
+	/*background-color: grey;*/
+	width: 600px;
+	height: 250px;
+	bottom: 445px;
+	position: relative;
+	display: inline-block;
+	margin-left: 280px;
+}
+
+.infoBox p {
+	text-align: center;
+	color: #ecf2f6;
+	font-size: 13px;
+}
+
+.infoBox ul {
+	list-style: none;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.infoBox ul li {
+	margin-top: 5px;
+	font-style: italic;
+	color: #b9a311;
+	font-size: 18px;
+}
+
+.infoBox ul li span {
+	font-style: normal;
+	color: #ecf2f6;
+}
+
+.infoBox2 {
+	display: block;
+	/*background-color: grey;*/
+	height: 250px;
+	width: 970px;
+	position: relative;
+	bottom: 442px;
+}
+
+.infoBox2 .gettingStarted {
+	display: inline-block;
+	background-color: #497fab;
+	width: 400px;
+	height: 5px;
+	margin-left: 100px;
+	margin-top: 10px;
+}
+
+.infoBox2 .gettingStarted h3 {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.infoBox2 .gettingStarted p {
+	text-align: center;
+	width: 350px;
+	height: 70px;
+	/*background-color: green;*/
+	margin-left: 25px;
+}
+
+.infoBox2 .gettingStarted ul {
+	text-align: center;
+	list-style: square;
+	width: 250px;
+	margin-left: 60px;
+}
+
+.infoBox2 .gettingStarted ul li a {
+	color: #7fafd6;
+	text-decoration: none;
+}
+
+.infoBox2 .applications {
+	display: inline-block;
+	background-color: #497fab;
+	width: 400px;
+	height: 5px;
+	margin-left: 525px;
+	margin-top: -200px;
+}
+
+.infoBox2 .applications h3 {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.infoBox2 .applications p {
+	text-align: center;
+	width: 350px;
+	height: 70px;
+	/*background-color: green;*/
+	margin-left: 25px;
+}
+
+.infoBox2 .applications ul {
+	text-align: center;
+	list-style: square;
+	width: 250px;
+	margin-left: 90px;
+}
+
+.infoBox2 .applications ul li a {
+	color: #7fafd6;
+	text-decoration: none;
+}
+
+.footerBox {
+	display: inline-block;
+	background-color: #326a9a;
+	width: 970px;
+	height: 100px;
+	position: relative;
+	display: block;
+	bottom: 442px;
+}
+
+.footerBox ul {
+	display: inline-block;
+	text-align: center;
+	list-style: none;
+	margin-top: 50px;
+	margin-left: 140px;
+} 
+
+.footerBox ul li {
+	display: inline-block;
+	margin-left: 60px;
+	text-decoration: none;
+}
+
+.footerBox ul li a {
+	color: #6c9fc9;
+	text-decoration: none;
+}
+
+.footerBox h6 {
+	color: #6c9fc9;
+	text-align: center;
+	margin-top: 10px; 
+}

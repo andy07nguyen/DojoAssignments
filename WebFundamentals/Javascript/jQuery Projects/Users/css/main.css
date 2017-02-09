@@ -1,0 +1,25 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+form input {
+	display: block;
+}
+
+table {
+		width: 400px;
+		display: inline-block;
+
+}
+
+tr #tr1 td {
+	width: 350px;
+	display: block;
+}
+
+form label {
+	display: block;
+}
+
+

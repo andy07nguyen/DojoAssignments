@@ -1,0 +1,49 @@
+.colorP {
+	display: none;
+	background-color: green;
+}
+
+.slideDown {
+	display: none;
+	width: 100px;
+	height: 100px;
+	background-color: red;
+}
+
+.slideUp {
+	width: 100px;
+	height: 100px;
+	background-color: green;
+}
+
+.slideToggle {
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+}
+
+.fadeIn {
+	display: none;
+	width: 100px;
+	height: 100px;
+	background-color: orange;
+}
+
+.fadeOut {
+	width: 100px;
+	height: 100px;
+	background-color: orange;
+}
+
+.selected {
+	color: green;
+}
+
+
+
+
+
+
+
+
+
