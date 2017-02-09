@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Form</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+	</head>
+	<body>
+		<h1>Index Page</h1>
+		<h3>Create a User</h3>
+		<form action="/users" method="post">
+			<label>Your Name:</label>
+			<input type="test" name="name">
+
+			<label>Dojo Location:</label>
+			<select class="dropBox1" name="dropbox1">
+				<option value="san jose">San Jose</option>				
+				<option value="berkeley">Berkeley</option>
+				<option value="oakland">oakland</option>
+			</select>
+
+			<label>Favorite Language:</label>
+			<select class="dropBox2" name="dropbox2">
+				<option value="python">Python</option>				
+				<option value="javaScript">JavaScript</option>
+				<option value="c">C++></option>
+			</select>
+
+			<label>Comment (optional):</label>
+			<textarea rows="4" cols="30" placeholder="Type Comment Here" name="comment"></textarea>
+			<input type="submit" value="Submit">
+		</form>
+	</body>
+</html>
