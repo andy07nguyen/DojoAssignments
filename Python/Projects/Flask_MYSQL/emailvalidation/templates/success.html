@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Success</title>
+</head>
+<body>
+	<h1>Success</h1>
+	{% for i in email: %}
+	<h3>{{ i ['email']}} &#32; {{ i ['created_at']}} &#32; {{ i ['uploaded_at']}}</h3>
+	{% endfor %}
+	<h3>{{ validEmail }}</h3>
+
+</body>
+</html>

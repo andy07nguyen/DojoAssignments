@@ -1,0 +1,4 @@
+pip install Flask==0.10.1
+
+source py2FlaskEnv/bin/activate
+

@@ -1,0 +1,118 @@
+Last login: Sun Feb 12 12:37:19 on console
+Andys-MacBook-Pro:~ andynguyen$ ls
+Applications	Documents	Library		Music		Public
+Desktop		Downloads	Movies		Pictures
+Andys-MacBook-Pro:~ andynguyen$ cd documents
+Andys-MacBook-Pro:documents andynguyen$ ls
+Documents	Study
+Andys-MacBook-Pro:documents andynguyen$ cd study
+Andys-MacBook-Pro:study andynguyen$ ;s
+-bash: syntax error near unexpected token `;'
+Andys-MacBook-Pro:study andynguyen$ ls
+CodingDojo		DojoAssignments		DojoAssignments.zip
+Andys-MacBook-Pro:study andynguyen$ cd dojoassignments
+Andys-MacBook-Pro:dojoassignments andynguyen$ ls
+MEAN		RUBY		iOS		readme.md
+Python		WebFundamentals	netCore
+Andys-MacBook-Pro:dojoassignments andynguyen$ cd python
+Andys-MacBook-Pro:python andynguyen$ ls
+Projects	about.txt	notes
+Andys-MacBook-Pro:python andynguyen$ cd projects
+Andys-MacBook-Pro:projects andynguyen$ ls
+Flask_Fundamentals	MySQL			Python_OOP
+Flask_MYSQL		Python_Fundamentals	myEnvironments
+Andys-MacBook-Pro:projects andynguyen$ flask_mysql
+-bash: flask_mysql: command not found
+Andys-MacBook-Pro:projects andynguyen$ ls
+Flask_Fundamentals	MySQL			Python_OOP
+Flask_MYSQL		Python_Fundamentals	myEnvironments
+Andys-MacBook-Pro:projects andynguyen$ cd flask_mysql
+Andys-MacBook-Pro:flask_mysql andynguyen$ ls
+Backup		flask_mysql	mydbconnection
+Andys-MacBook-Pro:flask_mysql andynguyen$ cd flask_mysql
+Andys-MacBook-Pro:flask_mysql andynguyen$ ls
+mysqlconnection.py	mysqlconnection.pyc	server.py
+Andys-MacBook-Pro:flask_mysql andynguyen$ cd ..
+Andys-MacBook-Pro:flask_mysql andynguyen$ ls
+Backup		flask_mysql	mydbconnection
+Andys-MacBook-Pro:flask_mysql andynguyen$ cd ..
+Andys-MacBook-Pro:projects andynguyen$ ls
+Flask_Fundamentals	MySQL			Python_OOP
+Flask_MYSQL		Python_Fundamentals	myEnvironments
+Andys-MacBook-Pro:projects andynguyen$ cd myenvironmenta
+-bash: cd: myenvironmenta: No such file or directory
+Andys-MacBook-Pro:projects andynguyen$ cd myenvironments
+Andys-MacBook-Pro:myenvironments andynguyen$ ls
+py2FlaskEnv
+Andys-MacBook-Pro:myenvironments andynguyen$ source py2flaskenv/bin/activate
+(py2FlaskEnv) Andys-MacBook-Pro:myenvironments andynguyen$ cd ..
+(py2FlaskEnv) Andys-MacBook-Pro:projects andynguyen$ ls
+Flask_Fundamentals	MySQL			Python_OOP
+Flask_MYSQL		Python_Fundamentals	myEnvironments
+(py2FlaskEnv) Andys-MacBook-Pro:projects andynguyen$ cd flask_mysql
+(py2FlaskEnv) Andys-MacBook-Pro:flask_mysql andynguyen$ ls
+Backup		flask_mysql	mydbconnection
+(py2FlaskEnv) Andys-MacBook-Pro:flask_mysql andynguyen$ cd flask_mysql
+(py2FlaskEnv) Andys-MacBook-Pro:flask_mysql andynguyen$ ls
+mysqlconnection.py	mysqlconnection.pyc	server.py
+(py2FlaskEnv) Andys-MacBook-Pro:flask_mysql andynguyen$ python server.py
+Traceback (most recent call last):
+  File "server.py", line 8, in <module>
+    print mysql.query_db("SELECT * FROM users")
+  File "/Users/andynguyen/Documents/Study/DojoAssignments/Python/Projects/Flask_MYSQL/flask_mysql/mysqlconnection.py", line 22, in query_db
+    result = self.db.session.execute(text(query), data)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/scoping.py", line 157, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 1107, in execute
+    bind, close_with_result=True).execute(clause, params or {})
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 971, in _connection_for_bind
+    engine, execution_options)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/orm/session.py", line 403, in _connection_for_bind
+    conn = bind.contextual_connect()
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 2103, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 2142, in _wrap_pool_connect
+    e, dialect, self)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 1456, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/base.py", line 2138, in _wrap_pool_connect
+    return fn()
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/pool.py", line 387, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/pool.py", line 766, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/pool.py", line 516, in checkout
+    rec = pool._do_get()
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/pool.py", line 1138, in _do_get
+    self._dec_overflow()
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/util/langhelpers.py", line 60, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/pool.py", line 1135, in _do_get
+    return self._create_connection()
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/pool.py", line 333, in _create_connection
+    return _ConnectionRecord(self)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/pool.py", line 461, in __init__
+    self.__connect(first_connect_check=True)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/pool.py", line 651, in __connect
+    connection = pool._invoke_creator(self)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/strategies.py", line 105, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/site-packages/sqlalchemy/engine/default.py", line 393, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/usr/local/lib/python2.7/site-packages/MySQLdb/__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+sqlalchemy.exc.OperationalError: (_mysql_exceptions.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' (61)")
+(py2FlaskEnv) Andys-MacBook-Pro:flask_mysql andynguyen$
+(py2FlaskEnv) Andys-MacBook-Pro:flask_mysql andynguyen$
+(py2FlaskEnv) Andys-MacBook-Pro:flask_mysql andynguyen$
+(py2FlaskEnv) Andys-MacBook-Pro:flask_mysql andynguyen$ python server.py
+[{u'first_name': u'andy', u'last_name': u'nguyen', u'id': 1L}, {u'first_name': u'andy', u'last_name': u'nguyen', u'id': 2L}, {u'first_name': u'andy', u'last_name': u'nguyen', u'id': 3L}, {u'first_name': u'andy', u'last_name': u'nguyen', u'id': 4L}, {u'first_name': u'andy', u'last_name': u'nguyen', u'id': 5L}, {u'first_name': u'andy', u'last_name': u'nguyen', u'id': 6L}]
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+[{u'first_name': u'andy', u'last_name': u'nguyen', u'id': 1L}, {u'first_name': u'andy', u'last_name': u'nguyen', u'id': 2L}, {u'first_name': u'andy', u'last_name': u'nguyen', u'id': 3L}, {u'first_name': u'andy', u'last_name': u'nguyen', u'id': 4L}, {u'first_name': u'andy', u'last_name': u'nguyen', u'id': 5L}, {u'first_name': u'andy', u'last_name': u'nguyen', u'id': 6L}]
+ * Debugger is active!
+ * Debugger pin code: 536-191-154

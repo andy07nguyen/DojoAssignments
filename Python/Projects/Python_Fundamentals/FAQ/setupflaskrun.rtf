@@ -1,0 +1,156 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red180\green36\blue25;
+}
+{\*\expandedcolortbl;;\csgray\c0;\csgray\c100000;\cssrgb\c76409\c21698\c12524;
+}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \cb3 \CocoaLigature0 Last login: Tue Feb  7 08:48:06 on ttys000\
+Andys-MacBook-Pro:~ andynguyen$ pip install virtualenv\
+Collecting virtualenv\
+  Downloading virtualenv-15.1.0-py2.py3-none-any.whl (1.8MB)\
+    100% |\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 1.8MB 592kB/s \
+Installing collected packages: virtualenv\
+Successfully installed virtualenv-15.1.0\
+Andys-MacBook-Pro:~ andynguyen$ \
+Andys-MacBook-Pro:~ andynguyen$ \
+Andys-MacBook-Pro:~ andynguyen$ ls\
+Applications	Documents	Library		Music		Public\
+Desktop		Downloads	Movies		Pictures\
+Andys-MacBook-Pro:~ andynguyen$ cd desktop\
+Andys-MacBook-Pro:desktop andynguyen$ mkdir CodingDojo_Python\
+Andys-MacBook-Pro:desktop andynguyen$ cd codingdojo_python\
+Andys-MacBook-Pro:codingdojo_python andynguyen$ mkdir myEnvironments\
+Andys-MacBook-Pro:codingdojo_python andynguyen$ mkdir Python_Fundamentals\
+Andys-MacBook-Pro:codingdojo_python andynguyen$ mkdir Python_OOP\
+Andys-MacBook-Pro:codingdojo_python andynguyen$ mkdir Flask_Fundamentals\
+Andys-MacBook-Pro:codingdojo_python andynguyen$ mkdir Flask_MYSQL\
+Andys-MacBook-Pro:codingdojo_python andynguyen$ cd myenvironments\
+Andys-MacBook-Pro:myenvironments andynguyen$ virtualenv py2FlaskEnv\
+New python executable in /Users/andynguyen/Desktop/CodingDojo_Python/myEnvironments/py2FlaskEnv/bin/python2.7\
+Also creating executable in /Users/andynguyen/Desktop/CodingDojo_Python/myEnvironments/py2FlaskEnv/bin/python\
+Installing setuptools, pip, wheel...done.\
+Andys-MacBook-Pro:myenvironments andynguyen$ source py2FlaskEnv/bin/activate\
+(py2FlaskEnv) Andys-MacBook-Pro:myenvironments andynguyen$ pip install flask\
+Collecting flask\
+  Using cached Flask-0.12-py2.py3-none-any.whl\
+Collecting Jinja2>=2.4 (from flask)\
+  Using cached Jinja2-2.9.5-py2.py3-none-any.whl\
+Collecting Werkzeug>=0.7 (from flask)\
+  Using cached Werkzeug-0.11.15-py2.py3-none-any.whl\
+Collecting click>=2.0 (from flask)\
+  Using cached click-6.7-py2.py3-none-any.whl\
+Collecting itsdangerous>=0.21 (from flask)\
+Collecting MarkupSafe>=0.23 (from Jinja2>=2.4->flask)\
+Installing collected packages: MarkupSafe, Jinja2, Werkzeug, click, itsdangerous, flask\
+Successfully installed Jinja2-2.9.5 MarkupSafe-0.23 Werkzeug-0.11.15 click-6.7 flask-0.12 itsdangerous-0.24\
+(py2FlaskEnv) Andys-MacBook-Pro:myenvironments andynguyen$ pip list\
+\cf4 DEPRECATION: The default format will switch to columns in the future. You can use --format=(legacy|columns) (or define a format=(legacy|columns) in your pip.conf under the [list] section) to disable this warning.\cf2 \
+appdirs (1.4.0)\
+click (6.7)\
+Flask (0.12)\
+itsdangerous (0.24)\
+Jinja2 (2.9.5)\
+MarkupSafe (0.23)\
+packaging (16.8)\
+pip (9.0.1)\
+pyparsing (2.1.10)\
+setuptools (34.1.1)\
+six (1.10.0)\
+Werkzeug (0.11.15)\
+wheel (0.29.0)\
+(py2FlaskEnv) Andys-MacBook-Pro:myenvironments andynguyen$ \
+(py2FlaskEnv) Andys-MacBook-Pro:myenvironments andynguyen$ \
+(py2FlaskEnv) Andys-MacBook-Pro:myenvironments andynguyen$ pip install Flask==0.10.1\
+Collecting Flask==0.10.1\
+  Downloading Flask-0.10.1.tar.gz (544kB)\
+    100% |\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 552kB 1.6MB/s \
+Requirement already satisfied: Werkzeug>=0.7 in ./py2FlaskEnv/lib/python2.7/site-packages (from Flask==0.10.1)\
+Requirement already satisfied: Jinja2>=2.4 in ./py2FlaskEnv/lib/python2.7/site-packages (from Flask==0.10.1)\
+Requirement already satisfied: itsdangerous>=0.21 in ./py2FlaskEnv/lib/python2.7/site-packages (from Flask==0.10.1)\
+Requirement already satisfied: MarkupSafe>=0.23 in ./py2FlaskEnv/lib/python2.7/site-packages (from Jinja2>=2.4->Flask==0.10.1)\
+Building wheels for collected packages: Flask\
+  Running setup.py bdist_wheel for Flask ... done\
+  Stored in directory: /Users/andynguyen/Library/Caches/pip/wheels/b6/09/65/5fcf16f74f334a215447c26769e291c41883862fe0dc7c1430\
+Successfully built Flask\
+Installing collected packages: Flask\
+  Found existing installation: Flask 0.12\
+    Uninstalling Flask-0.12:\
+      Successfully uninstalled Flask-0.12\
+Successfully installed Flask-0.10.1\
+(py2FlaskEnv) Andys-MacBook-Pro:myenvironments andynguyen$ \
+(py2FlaskEnv) Andys-MacBook-Pro:myenvironments andynguyen$ \
+(py2FlaskEnv) Andys-MacBook-Pro:myenvironments andynguyen$ \
+(py2FlaskEnv) Andys-MacBook-Pro:myenvironments andynguyen$ python\
+Python 2.7.13 (default, Dec 18 2016, 07:03:39) \
+[GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.42.1)] on darwin\
+Type "help", "copyright", "credits" or "license" for more information.\
+>>> \
+>>> \
+>>> \
+>>> import flask\
+>>> flask.__version__\
+'0.10.1'\
+>>> \
+>>> \
+>>> exit()\
+(py2FlaskEnv) Andys-MacBook-Pro:myenvironments andynguyen$ \
+(py2FlaskEnv) Andys-MacBook-Pro:myenvironments andynguyen$ \
+(py2FlaskEnv) Andys-MacBook-Pro:myenvironments andynguyen$ touch hello.py\
+(py2FlaskEnv) Andys-MacBook-Pro:myenvironments andynguyen$ ls\
+hello.py	py2FlaskEnv\
+(py2FlaskEnv) Andys-MacBook-Pro:myenvironments andynguyen$ sublimetext hello.py\
+-bash: sublimetext: command not found\
+(py2FlaskEnv) Andys-MacBook-Pro:myenvironments andynguyen$ sublime hello.py\
+-bash: sublime: command not found\
+(py2FlaskEnv) Andys-MacBook-Pro:myenvironments andynguyen$ sublime_text hello.py \
+-bash: sublime_text: command not found\
+(py2FlaskEnv) Andys-MacBook-Pro:myenvironments andynguyen$ sublime hello.py\
+-bash: sublime: command not found\
+(py2FlaskEnv) Andys-MacBook-Pro:myenvironments andynguyen$ python hello.py\
+Traceback (most recent call last):\
+  File "hello.py", line 1, in <module>\
+    from flask import flask\
+ImportError: cannot import name flask\
+(py2FlaskEnv) Andys-MacBook-Pro:myenvironments andynguyen$ ls\
+hello.py	py2FlaskEnv\
+(py2FlaskEnv) Andys-MacBook-Pro:myenvironments andynguyen$ python hello.py\
+Traceback (most recent call last):\
+  File "hello.py", line 1, in <module>\
+    from flask import flask\
+ImportError: cannot import name flask\
+(py2FlaskEnv) Andys-MacBook-Pro:myenvironments andynguyen$ python hello.py\
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)\
+ * Restarting with stat\
+ * Debugger is active!\
+ * Debugger pin code: 901-784-889\
+127.0.0.1 - - [07/Feb/2017 17:01:26] "GET / HTTP/1.1" 200 -\
+127.0.0.1 - - [07/Feb/2017 17:01:26] "GET /favicon.ico HTTP/1.1" 404 -\
+ * Detected change in '/Users/andynguyen/Desktop/CodingDojo_Python/myEnvironments/hello.py', reloading\
+ * Restarting with stat\
+ * Debugger is active!\
+ * Debugger pin code: 901-784-889\
+127.0.0.1 - - [07/Feb/2017 17:01:35] "GET / HTTP/1.1" 200 -\
+ * Detected change in '/Users/andynguyen/Desktop/CodingDojo_Python/myEnvironments/hello.py', reloading\
+ * Restarting with stat\
+ * Debugger is active!\
+ * Debugger pin code: 901-784-889\
+   \
+\
+\
+\
+deactivate\
+^C(py2FlaskEnv) Andys-MacBook-Pro:myenvironments andynguyen$ \
+(py2FlaskEnv) Andys-MacBook-Pro:myenvironments andynguyen$ \
+(py2FlaskEnv) Andys-MacBook-Pro:myenvironments andynguyen$ \
+(py2FlaskEnv) Andys-MacBook-Pro:myenvironments andynguyen$ \
+(py2FlaskEnv) Andys-MacBook-Pro:myenvironments andynguyen$ \
+(py2FlaskEnv) Andys-MacBook-Pro:myenvironments andynguyen$ deactivate\
+Andys-MacBook-Pro:myenvironments andynguyen$ \
+Andys-MacBook-Pro:myenvironments andynguyen$ \
+Andys-MacBook-Pro:myenvironments andynguyen$ \
+Andys-MacBook-Pro:myenvironments andynguyen$ \
+Andys-MacBook-Pro:myenvironments andynguyen$ \
+}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Email Validation</title>
+</head>
+<body>
+	<h1>Email Validation</h1>
+	<form action='/email' method="POST">
+		<label for="email">Email Address: <input type="email" name="email" placeholder="Type in your email"></label>
+		<input type="submit" name="Submit">
+	</form>
+	<hr>
+	<h3>{{validEmail}}</h3>
+	<hr>
+	<h3>{{email}}</h3>
+</body>
+</html>

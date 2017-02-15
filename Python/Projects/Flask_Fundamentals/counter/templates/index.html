@@ -1,0 +1,12 @@
+<html>
+  <head>
+    <title>Counter</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/main.css") }}" />
+  </head>
+  <body>
+    <div class="box">
+      <h1>This is the counter page.</h1>
+      <h2>You've visited this page {{session.count}} times.</h2>
+    </div>
+  </body>
+</html>

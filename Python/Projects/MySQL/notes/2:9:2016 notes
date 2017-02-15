@@ -1,0 +1,81 @@
+2/9/2016
+Lecture: MySQL 
+---------------------
+Finish FLASK:
+-resgistration form
+---------------------
+
+SQL - Structure Query Language
+
+Relational DB management system (RDBMS)
+
+1. Do not repeat data
+
+	
+
+	users:
+	Name	birth city
+	Amy			1
+
+
+-Primary Key
+  ^
+  |
+"id" cities:
+  1	 mountain view
+  2	 palo alto
+  3	 SF
+
+
+-Foreign Key
+
+
+Rules:
+1. Each column have ONE value
+2. Each column should be unique
+3. Non key coloumns should not be dependent on other non-key columns
+
+
+QUERY: question
+-making a request to the database.
+
+
+ERD: Entity Relationship Diagram
+-Visualization Tool
+	- Use this to contruct and plan the DB
+
+-One-to-one relationship
+
+-One-to-many relationship
+
+-Many-to-many relationship
+
+Joiner Table
+
+
+select * from cities;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
