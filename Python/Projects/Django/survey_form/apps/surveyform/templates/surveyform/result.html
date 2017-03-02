@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Result</title>
+    {% load staticfiles %}
+    <!-- The line above tells Django to be ready to listen for static files -->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}"media="screen" title="no title"  charset="utf-8">
+  </head>
+  <body>
+      <p>Thanks for submitting this form! You have submitted this form {{request.session.count}} times now.</p>
+      <h2>Submitted Information</h2>
+      <h3>{{request.session.name}}</h3>
+      <h3>{{request.session.city}}</h3>
+      <h3>{{request.session.c}}</h3>
+      <h3>{{request.session.comment}}</h3>
+      <a href="/">Go Back</a>
+  </body>
+</html>

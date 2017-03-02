@@ -1,11 +1,9 @@
-from django.shortcuts import render, HttpResponse
-
+from django.shortcuts import render
+#CONTROLLER!!!!
 # Create your views here.
-
 def index(request):
-	response = "Hello, I am your firstrequest!"
-	return HttpResponse(response)
-
+	print "*" * 100
+	return render(request, "first_app/index.html" )
 
 
 
