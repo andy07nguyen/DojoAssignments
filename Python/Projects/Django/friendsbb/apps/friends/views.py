@@ -4,8 +4,8 @@ from django.contrib import messages
 
 # Create your views here.
 def index(request):
-    request.session['user'] = "andy"
-    return render(request, 'friends/index.html')
+    # request.session['user'] = "andy"
+    return render(request, 'friends/test.html')
 
 def process(request):
     print "hello"
@@ -19,8 +19,8 @@ def process(request):
     #         print "#"*20, i, "#"*20
     #         messages.info(request, i)
     #     return redirect('/')
-    return render(request, 'friends/success.html')
+    return redirect('/success')
 
-def success(request):
-    print "hello"
-    return render(request, 'friends/success.html')
+def test(request):
+    print "works"
+    return render(request, 'friends/index.html')

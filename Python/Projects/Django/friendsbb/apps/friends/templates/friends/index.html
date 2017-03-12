@@ -3,26 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>Login/Registration</title>
-    {% load staticfiles %}
+    <!-- {% load staticfiles %} -->
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
     <!-- CUSTOMER CSS -->
-    <link rel="stylesheet" href="{% static 'friends/css/main.css' %}"media="screen" title="no title"  charset="utf-8">
+    <!-- <link rel="stylesheet" href="{% static 'friends/css/main.css' %}"media="screen" title="no title"  charset="utf-8"> -->
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
   </head>
   <body>
     <h1>Register</h1>
-    {% if messages %}
+
+    <!-- <div>
+      {% if messages %}
       <ul class="messages">
           {% for message in messages %}
           <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
           {% endfor %}
       </ul>
       {% endif %}
-    <form class="" action="/success" method="post">
+    </div> -->
+
+    <!-- <form class="" action="/success" method="post">
       {% csrf_token %}
       <div class="form-group">
         <label for="name">Name: </label>
@@ -49,6 +53,38 @@
         <input type="date" class="form-control" name="dob" placeholder="mm/dd/yyyy">
       </div>
       <input type="submit" class="btn btn-default" name="submit" value="Register">
+    </form> -->
+
+
+
+    <div>
+      {% if messages %}
+      <ul class="messages">
+          {% for message in messages %}
+          <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+          {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+    <form class="" action="/test" method="POST">
+      {% csrf_token %}
+      <label for="name">Name:</label>
+      <input type="text" name="fname" placeholder="Type in first name">
+      <label for="name">Alias:</label>
+      <input type="text" name="lname" placeholder="Type in last name">
+      <label for="email">Email:</label>
+      <input type="email" name="email" placeholder="Type in email address">
+      <label for="password">Password:</label>
+      <input type="password" name="password" placeholder="Type in password">
+      <label for="password">Confirm Password:</label>
+      <input type="password" name="confirmPw" placeholder="Type in password">
+      <label for="date">Date of Birth:</label>
+      <input type="date" name="date">
+      <input type="submit" name="submit" value="Register">
     </form>
+
+
+
+
   </body>
 </html>
