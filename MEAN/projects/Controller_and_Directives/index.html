@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- NG-APP -->
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Controller and Directives</title>
+    <script src="bower_components/angular/angular.js" charset="utf-8"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+  </head>
+  <body>
+<!-- NG-CONTROLLER -->
+    <div ng-controller="myController">
+<!-- NG-SUBMIT -->
+      <p>{{ txt }}</p>
+      <form ng-submit="addJunk()">
+        <label for="food">Favorite Food:</label>
+<!-- NG-MODEL -->
+        <input type="text" name="food" ng-model="newFood.name">
+<!-- NG-CLICK -->
+        ng-Click:<input type="submit" name="click" value="Click" ng-click="addFood()">
+        ng-Submit:<input type="submit" name="submit">
+      </form>
+<!-- NG-IF -->
+      <p>Currently Typing: <span ng-if="newFood.name"><b>{{ newFood.name }}</b></span></p>
+      <h4>Food List:</h4>
+      <ul>
+<!-- NG-REPEAT -->
+        <li ng-repeat="i in foods">{{ i.name }}</li>
+      </ul>
+<!-- NG-INIT -->
+      <h5 ng-init="coolFood='apples'">Cool Food: {{coolFood}}</h5>
+<!-- NG-BIND -->
+      <p ng-bind="newFood.name"></p>
+<!-- NG-HIDE -->
+      <label for="hide">Hide Me:</label>
+      <input type="checkbox" ng-model="myVar">
+      <div ng-hide="myVar">
+        <h4>Welcome</h4>
+      </div>
+<!-- NG-SHOW -->
+      <label for="show">Show Me:</label>
+      <input type="checkbox" ng-model="myShow">
+      <div ng-show="myShow">
+        <h4>Hello</h4>
+      </div>
+<!-- NG-REPEAT (w/ filter)-->
+      <h4>Filter List:</h4>
+      <ul>
+        <li ng-repeat="j in foods | orderBy: 'name'">{{ j.name }}</li>
+      </ul>
+    </div>
+  </body>
+</html>
