@@ -1,0 +1,3 @@
+myApp.factory('friendsFactory', function (){
+
+});

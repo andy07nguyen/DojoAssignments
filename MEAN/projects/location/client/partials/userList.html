@@ -1,0 +1,18 @@
+<div class="container">
+  <h3>User List</h3>
+  <!-- <div ng-controller="UserListsController"> -->
+  <div>
+    <table class="table table-striped">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Favorite Language</th>
+      </tr>
+      <tr ng-repeat="i in users">
+        <td>{{ i.first }}</td>
+        <td>{{ i.last }}</td>
+        <td>{{ i.language }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
