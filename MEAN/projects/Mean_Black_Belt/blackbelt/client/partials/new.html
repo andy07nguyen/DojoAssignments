@@ -1,0 +1,27 @@
+<h3>Put the question and options here:</h3>
+<a href="#!/dashboard">Cancel</a>
+<div ng-controller="usersController" class="container">
+  <form ng-submit="add()">
+    <div class="form-group">
+      <label for="question">Question:</label>
+      <input type="text" class="form-control" ng-model="item.question" placeholder="Type in Question">
+    </div>
+    <div class="form-group">
+      <label for="lastname">Option 1:</label>
+      <input type="text" class="form-control" ng-model="item.option1.value" placeholder="Type in Option">
+    </div>
+    <div class="form-group">
+      <label for="lastname">Option 2:</label>
+      <input type="text" class="form-control" ng-model="item.option2.value" placeholder="Type in Option">
+    </div>
+    <div class="form-group">
+      <label for="lastname">Option 3:</label>
+      <input type="text" class="form-control" ng-model="item.option3.value" placeholder="Type in Option">
+    </div>
+    <div class="form-group">
+      <label for="lastname">Option 4:</label>
+      <input type="text" class="form-control" ng-model="item.option4.value" placeholder="Type in Option">
+    </div>
+    <button type="submit" class="btn btn-default">Create Poll</button>
+  </form>
+</div>

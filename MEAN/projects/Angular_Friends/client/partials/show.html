@@ -1,0 +1,9 @@
+<h3>Show</h3>
+<div ng-controller="usersController" class="container">
+  <a href="#!/">Home</a>
+  <div ng-repeat="i in show_users">
+    <h3>Name: {{ i.first_name }}</h3>
+    <h3>Last Name: {{ i.last_name }}</h3>
+    <h3>Birthday: {{ i.birthday }}</h3>
+  </div>
+</div>

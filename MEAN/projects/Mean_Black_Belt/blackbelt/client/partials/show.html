@@ -1,0 +1,17 @@
+<h3>Which breed of dog is great to adopt?</h3>
+<p>Click the vote button to choose one.</p>
+<a href="#!/dashboard">Go to polls</a>
+<div ng-controller="showController" class="container">
+  <table class="table table-striped">
+    <tr>
+      <th>Option</th>
+      <th>Current Count of Votes</th>
+      <th>Action</th>
+    </tr>
+    <tr ng-repeat="i in showUser.options">
+      <td>{{ i.value }}</td>
+      <td>{{ i.vote }}</td>
+      <td><button ng-click="vote(i._id, $index)">Vote</button></td>
+    </tr>
+  </table>
+</div>

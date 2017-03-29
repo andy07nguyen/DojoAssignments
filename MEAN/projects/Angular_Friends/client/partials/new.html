@@ -1,0 +1,19 @@
+<h3>New</h3>
+<div ng-controller="usersController" class="container">
+  <a href="#!/">Home</a>
+  <form ng-submit="add()">
+    <div class="form-group">
+      <label for="firstname">First Name:</label>
+      <input type="text" class="form-control" ng-model="item.first" placeholder="First Name">
+    </div>
+    <div class="form-group">
+      <label for="lastname">Last Name:</label>
+      <input type="text" class="form-control" ng-model="item.last" placeholder="Last Name">
+    </div>
+    <div class="form-group">
+      <label for="birthday">Birthday:</label>
+      <input type="date" name="date" ng-model="item.date">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
