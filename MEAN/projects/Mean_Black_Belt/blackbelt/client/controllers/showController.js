@@ -1,6 +1,7 @@
-myApp.controller('showController', ['$scope', 'usersFactory', '$routeParams', '$location', function ($scope, usersFactory, $routeParams, $location){
+myApp.controller('showController', ['$scope', 'usersFactory', 'loginFactory', '$routeParams', '$location', function ($scope, usersFactory, loginFactory, $routeParams, $location){
   $scope.users = [];
   $scope.showUser = [];
+  $scope.currentUser = loginFactory.loggedInUser;
   // CALLBACK:
   function setData(data){
     // console.log("CAllBACK: ", data)
@@ -21,16 +22,12 @@ myApp.controller('showController', ['$scope', 'usersFactory', '$routeParams', '$
   }
   show()
 // VOTE - FUNCTION
-  $scope.vote = function(id, idx){
-    console.log("showController: ", id, idx)
-    usersFactory.vote(id, idx, function(data){
-      // console.log("DATA FROM SERVERJS: ", data)
+  $scope.vote = function(obj, idx){
+    // console.log("showController: ", obj, obj._user_id, idx)
+    usersFactory.vote(obj._user_id, idx, function(data){
+      console.log("DATA FROM FACTORY: ", data)
+      show()
     })
   }
-
-
-
-
-
 
 }]);

@@ -4,14 +4,12 @@ var Schema = mongoose.Schema;
 
 // FriendSchema:
 var FriendSchema = new mongoose.Schema({
-  _user: {type: Schema.Types.ObjectId, ref: 'Login'},
+  name: String,
   question: String,
   options: [{
-    // value: String, vote:{type:Number, default: 0},
-    // value: String, vote:{type:Number, default: 0},
-    // value: String, vote:{type:Number, default: 0},
     value: String, vote:{type:Number, default: 0}
-  }]
+  }],
+  _user_id: {type: Schema.Types.ObjectId, ref: 'Login'}
 }, { timestamps: true });
 
 mongoose.model('Friend', FriendSchema);

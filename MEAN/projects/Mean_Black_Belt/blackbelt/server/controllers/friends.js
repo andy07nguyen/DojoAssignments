@@ -19,8 +19,8 @@ module.exports = {
   },
 // CREATE:
   create: function(req,res){
-    console.log('data: ', req.body)
-    var new_user = new Friend({ _user:req.body.name, question: req.body.question, options: [req.body.option1, req.body.option2, req.body.option3, req.body.option4]});
+    // console.log('data: ', req.body)
+    var new_user = new Friend({ name:req.body.name, question: req.body.question, options: [req.body.option1, req.body.option2, req.body.option3, req.body.option4], _user_id: req.body._user_id});
     new_user.save(function(err, userData){
       console.log("DATA FROM MONGO: ", userData)
       if(err){
@@ -34,20 +34,20 @@ module.exports = {
 // UPDATE: VOTE
   update: function(req,res){
     console.log('CONTROLLER JS: ', req.params.id, req.body.index)
-    Friend.findOne({ _id: req.params.id }, function(err, userData){
+    Friend.findOne({ _user_id: req.params.id }, function(err, userData){
       if(err){
         res.json(err);
       } else {
         console.log('CONTROLLER JS: ', userData)
-        // userData.options[req.body.index].vote++
-        // userData.save(function(err, data){
-        //   console.log(data)
-        //   if(err){
-        //     res.json(err);
-        //   } else {
-        //     res.json(data)
-        //   }
-        // })
+        userData.options[req.body.index].vote++
+        userData.save(function(err, data){
+          // console.log(data)
+          if(err){
+            res.json(err);
+          } else {
+            res.json(data)
+          }
+        })
       }
     })
   },
@@ -79,7 +79,7 @@ module.exports = {
     })
     // res.json({placeholder:'show'});
   },
-// ******************************************************** //
+// ***************************LOGIN***************************** //
 // LOGIN:
   login: function(req,res){
     // console.log('CONTROLLER JS: ', req.body)

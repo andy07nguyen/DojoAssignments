@@ -11,7 +11,7 @@
     <tr ng-repeat="i in showUser.options">
       <td>{{ i.value }}</td>
       <td>{{ i.vote }}</td>
-      <td><button ng-click="vote(i._id, $index)">Vote</button></td>
+      <td><button type="button" ng-click="vote(showUser, $index)">Vote</button></td>
     </tr>
   </table>
 </div>

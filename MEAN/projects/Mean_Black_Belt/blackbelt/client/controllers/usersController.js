@@ -17,7 +17,7 @@ myApp.controller('usersController', ['$scope', 'usersFactory', 'loginFactory', '
     // console.log("LOGGEDINUSER: ", $scope.loggedInUser)
     // console.log("usersController: ", $scope.item)
     $scope.item.name = $scope.loggedInUser.name
-    // console.log($scope.item)
+    $scope.item._user_id = $scope.loggedInUser._id
     usersFactory.create($scope.item, function(data){
       // console.log("usersController: ", data)
       $scope.users = data;
@@ -32,7 +32,5 @@ myApp.controller('usersController', ['$scope', 'usersFactory', 'loginFactory', '
     usersFactory.delete(data._id, setData);
     usersFactory.index(setData);
   }
-
-
 
 }]);
