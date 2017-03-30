@@ -24,6 +24,7 @@ myApp.controller('usersController', ['$scope', 'usersFactory', 'loginFactory', '
       // console.log($scope.users)
     });
     $scope.item = {};
+    usersFactory.index(setData);
     $location.url('/dashboard');
   }
 // REMOVE - FUNCTION

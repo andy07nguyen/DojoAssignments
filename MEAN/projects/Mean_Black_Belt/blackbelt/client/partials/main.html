@@ -13,8 +13,8 @@
     <tr ng-repeat="i in users">
       <td>{{ i.name }}</td>
       <td><a href="#!/poll/{{i._id}}">{{ i.question }}</a></td>
-      <td>{{ i.createdAt }}</td>
-      <td><button type="button" ng-click="remove(i)">Delete</button></td>
+      <td>{{ i.createdAt | date: dd-MM-yyyy }}</td>
+      <td><button ng-show="loggedInUser._id == i._user._id" type="button" ng-click="remove(i)">Delete</button></td>
     </tr>
   </table>
 </div>

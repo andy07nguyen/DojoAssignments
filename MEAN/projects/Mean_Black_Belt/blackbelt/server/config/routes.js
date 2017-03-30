@@ -19,7 +19,7 @@ app.post('/friends/new', function(req, res) {
 });
 // UPDATE: VOTE
 app.put('/friends/vote/:id', function(req, res) {
-  console.log("SERVER ROUTES: ", req.params.id, req.body.index)
+  // console.log("SERVER ROUTES: ", req.params.id, req.body.index)
   friends.update(req, res);
 });
 // DELETE:
