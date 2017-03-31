@@ -3,24 +3,28 @@
 <div ng-controller="usersController" class="container">
   <form ng-submit="add()">
     <div class="form-group">
-      <p ng-bind="errorMsg.errors.question.message"></p>
+      <h6>{{ errorMsg.errors.question.message }}</h6>
       <label for="question">Question:</label>
       <input type="text" class="form-control" ng-model="item.question" placeholder="Type in Question">
     </div>
     <div class="form-group">
-      <label for="lastname">Option 1:</label>
+      <h6>{{ errorMsg.errors["options.0.value"].message }}</h6>
+      <label for="option1">Option 1:</label>
       <input type="text" class="form-control" ng-model="item.option1.value" placeholder="Type in Option">
     </div>
     <div class="form-group">
-      <label for="lastname">Option 2:</label>
+      <h6>{{ errorMsg.errors["options.1.value"].message }}</h6>
+      <label for="option2">Option 2:</label>
       <input type="text" class="form-control" ng-model="item.option2.value" placeholder="Type in Option">
     </div>
     <div class="form-group">
-      <label for="lastname">Option 3:</label>
+      <h6>{{ errorMsg.errors["options.2.value"].message }}</h6>
+      <label for="option3">Option 3:</label>
       <input type="text" class="form-control" ng-model="item.option3.value" placeholder="Type in Option">
     </div>
     <div class="form-group">
-      <label for="lastname">Option 4:</label>
+      <h6>{{ errorMsg.errors["options.3.value"].message }}</h6>
+      <label for="option4">Option 4:</label>
       <input type="text" class="form-control" ng-model="item.option4.value" placeholder="Type in Option">
     </div>
     <button type="submit" class="btn btn-default">Create Poll</button>

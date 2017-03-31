@@ -14,7 +14,7 @@ myApp.factory('usersFactory', ['$http', function ($http){
   factory.create = function(data, callback){
     // console.log("usersFactory: ", data)
     $http.post('/friends/new', data).then(function(errData){
-      console.log("DATA FROM SERVER CONTROLLER: )", errData);
+      // console.log("DATA FROM SERVER CONTROLLER: ", errData.data, errData.data.errors["options.0.value"].message);
       // errorMsg.push(errData.data)
       callback(errData.data)
       // callback(errorMsg)
