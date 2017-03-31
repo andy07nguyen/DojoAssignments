@@ -3,6 +3,7 @@ myApp.controller('usersController', ['$scope', 'usersFactory', 'loginFactory', '
   $scope.loggedInUser = loginFactory.loggedInUser;
   $scope.users = [];
   $scope.showUser;
+  $scope.errorMsg = [];
 // CALLBACK:
   function setData(data){
     // console.log("CAllBACK: ", data)
@@ -18,13 +19,16 @@ myApp.controller('usersController', ['$scope', 'usersFactory', 'loginFactory', '
     // console.log("usersController: ", $scope.item)
     $scope.item.name = $scope.loggedInUser.name
     $scope.item._user_id = $scope.loggedInUser._id
-    usersFactory.create($scope.item, function(data){
+    usersFactory.create($scope.item, function(errData){
+      // console.log("usersController ERROR: ", errData)
+      $scope.errorMsg = errData;
+
+    },function(data){
       // console.log("usersController: ", data)
       $scope.users = data;
       // console.log($scope.users)
     });
     $scope.item = {};
-    usersFactory.index(setData);
     $location.url('/dashboard');
   }
 // REMOVE - FUNCTION

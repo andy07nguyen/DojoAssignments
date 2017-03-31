@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 // FriendSchema:
 var FriendSchema = new mongoose.Schema({
   name: String,
-  question: String,
+  question: {type:String, required:[true,"Invaild Entry"]},
   options: [{
     value: String, vote:{type:Number, default: 0}
   }],
