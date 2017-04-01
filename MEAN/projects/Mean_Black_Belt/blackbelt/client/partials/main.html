@@ -14,7 +14,8 @@
       <td>{{ i.name }}</td>
       <td><a href="#!/poll/{{i._id}}">{{ i.question }}</a></td>
       <td>{{ i.createdAt | date: dd-MM-yyyy }}</td>
-      <td><button ng-show="loggedInUser.name == i.name" type="button" ng-click="remove(i)">Delete</button></td>
+      <td><button ng-show="loggedInUser._id == i._user_id" type="button" ng-click="remove(i)">Delete</button></td>
+<!-- ng-show="loggedInUser.name == i.name" -->
     </tr>
   </table>
 </div>

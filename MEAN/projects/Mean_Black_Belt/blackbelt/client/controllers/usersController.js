@@ -17,19 +17,24 @@ myApp.controller('usersController', ['$scope', 'usersFactory', 'loginFactory', '
   $scope.add = function(){
     // console.log("LOGGEDINUSER: ", $scope.loggedInUser)
     // console.log("usersController: ", $scope.item)
-    $scope.item.name = $scope.loggedInUser.name
-    $scope.item._user_id = $scope.loggedInUser._id
-    usersFactory.create($scope.item, function(errData){
-      // console.log("usersController ERROR: ", errData)
-      $scope.errorMsg = errData;
-
-    },function(data){
+    $scope.item.name = $scope.loggedInUser.name;
+    $scope.item._user_id = $scope.loggedInUser._id;
+    usersFactory.create($scope.item, function(data){
       // console.log("usersController: ", data)
-      $scope.users = data;
+      if(typeof data == "object"){
+        console.log("ERROR - usersController: ", data)
+        $scope.errorMsg = data;
+      } else {
+        console.log("SUCCESS - usersController: ", data)
+        $scope.users = data;
+        $location.path('/dashboard');
+
+      };
       // console.log($scope.users)
+      // $location.path('/dashboard');
     });
     $scope.item = {};
-    $location.url('/dashboard');
+    // $location.url('/dashboard');
   }
 // REMOVE - FUNCTION
   $scope.remove = function(data){
@@ -37,5 +42,6 @@ myApp.controller('usersController', ['$scope', 'usersFactory', 'loginFactory', '
     usersFactory.delete(data._id, setData);
     usersFactory.index(setData);
   }
+
 
 }]);

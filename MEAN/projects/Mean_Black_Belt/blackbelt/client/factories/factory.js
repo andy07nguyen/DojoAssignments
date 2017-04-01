@@ -1,7 +1,6 @@
-myApp.factory('usersFactory', ['$http', function ($http){
+myApp.factory('usersFactory', ['$http', '$location', function ($http, $location){
   var usersList = [];
   var showUser = [];
-  var errorMsg = [];
   var factory = {};
   // INDEX: SHOW
   factory.index = function(callback){
@@ -13,17 +12,25 @@ myApp.factory('usersFactory', ['$http', function ($http){
   // CREATE:
   factory.create = function(data, callback){
     // console.log("usersFactory: ", data)
-    $http.post('/friends/new', data).then(function(errData){
-      // console.log("DATA FROM SERVER CONTROLLER: ", errData.data, errData.data.errors["options.0.value"].message);
-      // errorMsg.push(errData.data)
-      callback(errData.data)
-      // callback(errorMsg)
-
-    },function(returned_data){
-      // console.log("DATA FROM SERVER CONTROLLER: )", returned_data.data, returned_data.data.errors.question.message);
-      usersList.push(returned_data.data)
-      // callback(returned_data.data)
-      callback(usersList)
+    $http.post('/friends/new', data).then(function(returned_data){
+      console.log("DATA FROM SERVER CONTROLLER: )", returned_data.data);
+      // console.log("Errors - DATA FROM SERVER CONTROLLER: )", returned_data.data.errors.question.message, returned_data.data.errors["options.0.value"].message);
+      var question_name = returned_data.data.errors.question.name;
+      var option1_name = returned_data.data.errors["options.0.value"].name;
+      var option2_name = returned_data.data.errors["options.1.value"].name;
+      var option3_name = returned_data.data.errors["options.2.value"].name;
+      var option4_name = returned_data.data.errors["options.3.value"].name;
+      // ERROR CHECK: RETURN DATA
+      if( question_name && option1_name && option2_name && option3_name && option4_name == "ValidatorError"){
+        callback(returned_data.data)
+      } else {
+        usersList.push(returned_data.data)
+        // callback(returned_data.data)
+        callback(usersList)
+      }
+      // usersList.push(returned_data.data)
+      // // callback(returned_data.data)
+      // callback(usersList)
     })
   };
   // DELETE:
