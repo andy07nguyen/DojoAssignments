@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit</title>
+<!-- BOOTSTRAP -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style type="text/css" media="screen">
+      .form-group{
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Editing <%= @branch.branch %></h1>
+    <div class="container">
+      <form action="/dojos/<%= @branch.id%>" method="post">
+        <input type="hidden" name="_method" value="patch">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <div class="form-group">
+          <label for="branch">Branch:</label>
+          <input type="text" class="form-control" name="dojo[branch]" value="<%= @branch.branch %>" placeholder="Branch">
+        </div>
+        <div class="form-group">
+          <label for="street">Street:</label>
+          <input type="text" class="form-control" name="dojo[street]" value="<%= @branch.street %>" placeholder="Street">
+        </div>
+        <div class="form-group">
+          <label for="city">City:</label>
+          <input type="text" class="form-control" name="dojo[city]" value="<%= @branch.city %>" placeholder="City">
+        </div>
+        <div class="form-group">
+          <label for="state">State:</label>
+          <input type="text" class="form-control" name="dojo[state]" value="<%= @branch.state %>" placeholder="State">
+        </div>
+        <button type="submit" class="btn btn-default">Update</button>
+        <!-- <input type="submit" value="Create"> -->
+      </form>
+      <br>
+      <a href="/dojos">Go Back</a>
+      <a href="/dojos/<%= @branch.id %>">Show</a>
+    </div
+  </body>
+</html>
