@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+# DOJOS - ROUTES:
   get 'dojos' => 'dojos#index'
   get 'dojos/new' => 'dojos#new'
   post 'dojos' => 'dojos#create'
@@ -6,6 +7,14 @@ Rails.application.routes.draw do
   get 'dojos/:id/edit' => 'dojos#edit'
   patch 'dojos/:id' => 'dojos#update'
   delete 'dojos/:id' => 'dojos#destroy'
+# STUDENTS - ROUTES:
+  get '/dojos/:id/students/' => 'students#index'
+  get '/dojos/:id/students/new' => 'students#new'
+  post '/dojos/:id/students/' => 'students#create'
+  get '/dojos/:id/students/:id' => 'students#show'
+  get '/dojos/:id/students/:id/edit' => 'students#edit'
+  patch 'dojos/:id/students/:id' => 'students#update'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit</title>
+<!-- BOOTSTRAP -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style type="text/css" media="screen">
+      .form-group{
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Students#edit</h1>
+    <p>Find me in app/views/students/edit.html.erb</p>
+    <h1>Editing <%= @user.first_name %> <%= @user.last_name %></h1>
+    <div class="container">
+      <form action="/dojos/<%= @dojo.id %>/students/<%= @user.id%>" method="post">
+        <input type="hidden" name="_method" value="patch">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <div class="form-group">
+          <label for="first_name">First name:</label>
+          <input type="text" class="form-control" name="student[first_name]" value="<%= @user.first_name %>" placeholder="First">
+        </div>
+        <div class="form-group">
+          <label for="last_name">Last Name:</label>
+          <input type="text" class="form-control" name="student[last_name]" value="<%= @user.last_name %>" placeholder="Last">
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="text" class="form-control" name="student[email]" value="<%= @user.email %>" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="dojo">Dojo:</label>
+          <select name="student[dojo_id]">
+            <% @dojos.each do |i| %>
+              <% if i.id == @user.dojo_id %>
+					      <option selected value="<%= i.id %>"><%= i.branch %></option>
+				      <% else %>
+					      <option value="<%= i.id %>"><%= i.branch %></option>
+				      <% end %>
+            <% end %>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-default">Update</button>
+        <!-- <input type="submit" value="Create"> -->
+      </form>
+      <br>
+      <a href="/dojos">Go Back</a>
+      <a href="/dojos/<%= @dojo.id %>/students/<%= @user.id %>"><%= @user.first_name %></a>
+    </div
+  </body>
+</html>

@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Dojo Dashboard</title>
+    <title>Student Dashboard</title>
 <!-- BOOSTRAP -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -12,29 +12,34 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </head>
   <body>
-    <h1>Dojos#index</h1>
-    <p>Find me in app/views/dojos/index.html.erb</p>
+    <h1>Students#index</h1>
+    <p>Find me in app/views/students/index.html.erb</p>
 
     <div class="container">
+      <h3><%= @dojo.branch %></h3> <a href="/">Edit</a>
+      <h5>Address: <span><%= @dojo.street %></span></h5>
+      <h5>City: <span><%= @dojo.city %></span></h5>
+      <h5>State: <span><%= @dojo.state %></span></h5>
+      <h4>Student Roster</h4>
+      <br>
       <table class="table table-striped table-bordered">
         <tr>
-          <th>Coding Dojo Branch</th>
-          <th>Street</th>
-          <th>City</th>
-          <th>State</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
           <th>Actions</th>
         </tr>
-        <% @dojos.each do |i| %>
+        <% @userDojo.each do |i| %>
         <tr>
-          <td><a href="/dojos/<%= i.id %>/students"><%= i.branch %></a></td>
-          <td><%= i.street %></td>
-          <td><%= i.city %></td>
-          <td><%= i.state %></td>
-          <td><a href="/dojos/<%= i.id %>">Show</a> | <a href="/dojos/<%= i.id %>/edit">Edit</a> | <%= link_to "Delete", "dojos/#{i.id}", data: { method: :delete, confirm: "Are you sure?" } %></td>
+          <td><%= i.first_name %></td>
+          <td><%= i.last_name %></td>
+          <td><%= i.email %></td>
+          <td><a href="/dojos/<%= i.dojo_id %>/students/<%= i.id %>">Show</a> | <a href="/dojos/<%= i.dojo_id %>/students/<%= i.id %>/edit">Edit</a> | <%= link_to "Delete", "dojos/#{i.id}", data: { method: :delete, confirm: "Are you sure?" } %></td>
         </tr>
         <% end %>
       </table>
-      <a href="/dojos/new">New Dojo</a>
+      <a href="/dojos">Home</a>
+      <%= link_to "Add Student", "/dojos/#{@dojo.id}/students/new" %>
     </div>
   </body>
 </html>
