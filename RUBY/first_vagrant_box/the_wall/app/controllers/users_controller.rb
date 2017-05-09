@@ -17,6 +17,6 @@ class UsersController < ApplicationController
 
   def logout
     reset_session
-    redirect_to new_user_path
+    redirect_to users_new_path
   end
 end

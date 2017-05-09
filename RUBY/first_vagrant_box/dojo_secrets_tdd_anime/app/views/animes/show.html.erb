@@ -1,0 +1,7 @@
+<h1><%= @anime.name %></h1>
+<a href="/animes/<%= @anime.id %>/edit">Edit Anime</a>
+<form action="/animes/<%= @anime.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="submit" value="Delete">
+</form>
